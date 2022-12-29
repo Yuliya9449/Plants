@@ -1,0 +1,139 @@
+/* font-family: 'Inika', serif;
+font-family: 'Inter', sans-serif;
+font-family: 'Roboto', sans-serif; */
+@font-face {
+    font-family: "Inika";
+    src: url("./assets/fonts/Inika/Inika-Regular.ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Inika";
+    src: url("./assets/fonts/Inika/Inika-Bold.ttf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("./assets/fonts/inter/static/Inter-Light.ttf");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("./assets/fonts/inter/static/Inter-Regular.ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("./assets/fonts/inter/static/Inter-Bold.ttf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("./assets/fonts/roboto/Roboto-Regular.ttf");
+    font-weight: 400;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #EDF2EC;
+    /* background-color: #F5F5F5; */
+    width: 1440px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 0;
+}
+
+
+.body-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header {
+    width: 1440px;
+    height: 134px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Inika', serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000;
+}
+
+.header-container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+.header-logo__img {
+    width: 20px;
+    height: 20px;
+    margin-left: 111px;
+}
+
+
+.header-logo__title {
+    text-align: center;
+    padding-bottom: 8px;
+
+
+}
+
+.nav {
+
+    /* background-color: aquamarine; */
+
+}
+
+.nav-list {
+    display: flex;
+    justify-content: flex-end;
+    height: 50px;
+    align-items: center;
+    margin-right: 86px;
+}
+
+.nav-list__item {
+    list-style: none;
+    padding: 10px 23.5px;
+}
+
+.nav-list__link {
+    text-decoration: none;
+    color: #010201;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    padding: 5px 20px;
+    margin: 0 -20px;
+    transition: all 1s;
+}
+
+.nav-list__link:hover {
+    background-color: #499A18;
+    color: #EDF2EC;
+}
+
+.nav-list__link.active {
+    color: #E06733;
+    font-weight: 700;
+}
+
+.nav-list__link.active:hover {
+    background-color: inherit;
+}
