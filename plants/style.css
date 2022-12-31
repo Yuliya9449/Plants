@@ -41,6 +41,11 @@ font-family: 'Roboto', sans-serif; */
     box-sizing: border-box;
 }
 
+html,
+body{
+    scroll-behavior: smooth;
+}
+
 button {
     padding: 0;
 }
@@ -52,6 +57,7 @@ body {
     min-height: 100vh;
     margin: 0 auto;
     padding: 0;
+    
 }
 
 
@@ -60,6 +66,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    
 }
 
 .header {
@@ -276,4 +283,89 @@ h2 {
 .houseplant1 {
     width: 464px;
     height: 479px;
+}
+
+.section-service{
+    padding: 40px 109px;
+}
+
+.section-service--container{
+    display: flex;
+    flex-direction: column;
+}
+
+.section-service--heading{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 50px;
+    
+    /* padding: 40px 109px; */
+}
+
+.section-service--h2{
+    
+    margin-right: calc(157px - 17px);
+    
+}
+
+.service-btn{
+    width: 161px;
+    height: 50px;
+    margin: auto 17px;
+    font-family: 'Inika';
+
+font-weight: 400;
+font-size: 20px;
+line-height: 26px;     /* identical to box height */
+color: #E06733; 
+border: 1px solid rgba(224, 103, 51, 1);
+border-radius: 5px;
+
+}
+
+.service-items--container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto -58px;
+    
+}
+
+.service-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 330px;
+    height: 450px;
+    margin: 28px 58px;
+
+}
+
+.service-item--img{
+    
+    width: 329px;
+    height: 350px;
+
+}
+
+.h3{
+    font-family: 'Inter';
+font-weight: 700;
+font-size: 20px;
+line-height: 20px;/* or 100% */
+text-align: center;
+color: #E06733;
+
+margin: 10px 0;
+}
+
+.service-item--text{
+    font-family: 'Inter';
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;   /* identical to box height, or 125% */
+color: #717171;
+margin: 4px 0;
+
 }
