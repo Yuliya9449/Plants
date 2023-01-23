@@ -1,3 +1,18 @@
+    window.addEventListener('load', function(){
+
+    let a = document.querySelector(".header__logo-line");
+    let nav = document.querySelector(".navigation");
+    let ham = document.querySelector(".hamburger");
+
+    a.addEventListener('click', changeNav);
+    nav.addEventListener('click', changeNav);
+
+    function changeNav(){
+        nav.classList.toggle('navigation-hidden');
+        ham.classList.toggle('hamburger-toggle');
+    };
+});
+
 console.log ("1.  Вёрстка валидная               +10") 
 console.log ("2.  Вёрстка семантическая, присутствуют:")
 console.log ("    2а. header, main, footer      +3")
