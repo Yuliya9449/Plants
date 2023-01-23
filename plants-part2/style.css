@@ -113,37 +113,37 @@ font-family: 'Inter', sans-serif;
 font-family: 'Roboto', sans-serif; */
 @font-face {
   font-family: "Inika";
-  src: local("Inika Normal"), local("Inika-Normal"), url("../assets/fonts/Inika/Inika-Regular.ttf") format("truetype");
+  src: local("Inika Normal"), local("Inika-Normal"), url("./assets/fonts/Inika/Inika-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Inika";
-  src: local("Inika Bold"), local("Inika-Bold"), url("../assets/fonts/Inika/Inika-Bold.ttf") format("truetype");
+  src: local("Inika Bold"), local("Inika-Bold"), url("./assets/fonts/Inika/Inika-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "Inter";
-  src: local("Inter Light"), local("Inter-Light"), url("../assets/fonts/inter/static/Inter-Light.ttf") format("truetype");
+  src: local("Inter Light"), local("Inter-Light"), url("./assets/fonts/inter/static/Inter-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: "Inter";
-  src: local("Inter Normal"), local("Inter-Normal"), url("../assets/fonts/inter/static/Inter-Regular.ttf") format("truetype");
+  src: local("Inter Normal"), local("Inter-Normal"), url("./assets/fonts/inter/static/Inter-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Inter";
-  src: local("Inter Bold"), local("Inter-Bold"), url("../assets/fonts/inter/static/Inter-Bold.ttf") format("truetype");
+  src: local("Inter Bold"), local("Inter-Bold"), url("./assets/fonts/inter/static/Inter-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "Roboto";
-  src: local("Roboto Normal"), local("Roboto-Normal"), url("../assets/fonts/roboto/Roboto-Regular.ttf") format("truetype");
+  src: local("Roboto Normal"), local("Roboto-Normal"), url("./assets/fonts/roboto/Roboto-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -582,6 +582,15 @@ h3 {
   text-shadow: 0 0 1px #E06733;
   color: #E06733;
 }
+
+.header__logo-line {
+  display: none;
+}
+  @media (max-width: 570px) {
+    .header__logo-line {
+      display: block;
+    }
+  }
 
 /* ============================= */
 
