@@ -96,7 +96,7 @@ section, main, footer, header, article {
   box-sizing: border-box;
 }
 
-.hamburger-toggle > *, .navigation-hidden, .navigation__link, .navigation, .hamburger__line, .price__button, .button {
+.service__item, .navigation-hidden, .navigation__link, .navigation, .hamburger-toggle > *, .hamburger__line, .price__button, .button {
   transition: all 1s;
 }
 
@@ -220,10 +220,10 @@ h3 {
   border-radius: 5px;
   background-color: inherit;
 }
-.button:hover {
+/* .button:hover {
   background-color: #E06733;
   color: #ffffff;
-}
+} */
 
 .welcome__button {
   padding: 10px 26px;
@@ -233,6 +233,11 @@ h3 {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 2rem;
+}
+.welcome__button:hover {
+  background-color: #E06733;
+  color: #ffffff;
+  cursor: pointer;
 }
 @media (max-width: 380px) {
   .welcome__button {
@@ -254,6 +259,10 @@ h3 {
   font-size: 2rem;
   line-height: 2.6rem;
 }
+.service__button:hover {
+  text-shadow: 0 0 1px #E06733;
+  cursor: pointer;
+}
 @media (max-width: 380px) {
   .service__button {
     min-width: 121px;
@@ -264,6 +273,11 @@ h3 {
     line-height: 2.25rem;
     padding: 5px 0;
   }
+}
+
+.service__button_active {
+  background-color: #E06733;
+  color: #ffffff;
 }
 
 .service__button:first-child {
@@ -278,6 +292,11 @@ h3 {
   font-size: 2rem;
   line-height: 2.6rem;
   color: #E06733;
+}
+.price__button:hover {
+  background-color: #E06733;
+  color: #ffffff;
+  cursor: pointer;
 }
 .price__button_bordered {
   border: 1px solid #E06733;
@@ -795,6 +814,7 @@ h3 {
 }
 
 .service__item {
+  filter: blur(0px);
   max-width: 330px;
   min-height: 450px;
   border: 1px solid #E3E1D5;
@@ -828,6 +848,10 @@ h3 {
 }
 .service__item_background-6 {
   background-image: url("./assets/images/image6-section-service.jpg");
+}
+
+.service__item_blur {
+  filter: blur(5px);
 }
 
 .service-item__title {
