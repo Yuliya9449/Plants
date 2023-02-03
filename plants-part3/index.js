@@ -88,6 +88,52 @@ function toToggleBlur() {
     };
 }
 
+
+// ! accordion ================================
+
+const accordionIconsArray = [...document.querySelectorAll('.accordion__ico')];
+let accordionItem = null;
+let accordionContent = null;
+let accordionIco = null;
+
+
+for(let elem of accordionIconsArray) {
+    elem.addEventListener('click', toToggleAccordion);
+}
+
+function toToggleAccordion(e)  {
+    // e.stopPropagation();
+    if(e.target.classList.contains('accordion__ico_open')) {
+        toRemoveOpen(e.target);
+    }
+    else {
+        for(let i = 0; i < accordionIconsArray.length; i++) {
+            toRemoveOpen(accordionIconsArray[i]);
+        }
+        accordionIco = e.target;
+        toAddOpen(accordionIco);
+    }
+}
+
+function toAddOpen(ico) {
+    setTimeout(function(){
+    accordionItem = ico.closest('.prices-accordion__item');
+    accordionContent = accordionItem.querySelector('.prices-accordion__content');
+    ico.classList.add('accordion__ico_open');
+    accordionItem.classList.add('prices-accordion__item_open');
+    accordionContent.classList.add('prices-accordion__content_open');
+}, 200);
+}
+
+function toRemoveOpen(ico) {
+    accordionItem = ico.closest('.prices-accordion__item');
+    accordionContent = accordionItem.querySelector('.prices-accordion__content');
+    ico.classList.remove('accordion__ico_open');
+    accordionItem.classList.remove('prices-accordion__item_open');
+    accordionContent.classList.remove('prices-accordion__content_open');
+}
+
+
 // !=======================================
 
 
