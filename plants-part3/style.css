@@ -96,16 +96,8 @@ section, main, footer, header, article {
   box-sizing: border-box;
 }
 
-.service__item, .navigation-hidden, .navigation__link, .navigation, .select_active > .select__body, .select__item-title, .select__header, .prices-accordion__content, .prices-accordion__item, .hamburger-toggle > *, .hamburger__line, .ico, .price__button, .button {
+.service__item, .navigation-hidden, .navigation__link, .navigation, .select_active > .select__body, .select__item-title, .select__header, .prices-accordion__content_open, .prices-accordion__content, .prices-accordion__item, .hamburger-toggle > *, .hamburger__line, .ico, .price__button, .button {
   transition: all 1s;
-}
-
-.prices-accordion__content_open, .prices-accordion__content {
-  transition: all 0.5s;
-}
-
-.prices-accordion__content_open {
-  transition: all 0.5s;
 }
 
 .prices-content__title, .prices__title, .prices-accordion__title, body {
@@ -422,12 +414,11 @@ h3 {
 
 .prices-accordion__item {
   min-width: 250px;
-  padding: 16px 40px 0;
+  padding: 16px 40px 12px;
   background-color: #EDF2EC;
   border-radius: 20px;
   margin-bottom: 34px;
 }
-
 .prices-accordion__item:last-child {
   margin-bottom: 0;
 }
@@ -452,7 +443,7 @@ h3 {
   font-size: 2rem;
   line-height: 2rem;
   color: #000000;
-  margin: 0 0 5px;
+  margin: 0;
 }
 @media (max-width: 380px) {
   .prices-accordion__title {
@@ -468,17 +459,15 @@ h3 {
 }
 
 .prices-accordion__content {
-  margin: 11px 0 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border-top: 0.5px solid #EDF2EC;
   max-height: 0;
   overflow: hidden;
 }
 
-.prices-accordion__content_open {
-  max-height: 1000px;
+.prices-accordion__content-wrapper {
+  margin: 11px 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border-top: 0.5px solid #AEA1A1;
 }
 
@@ -563,6 +552,10 @@ h3 {
   align-items: center;
   cursor: pointer;
   padding: 5px 34px 5px 19px;
+}
+
+.select__header:hover {
+  background-color: #C1E698;
 }
 
 .select__body {
