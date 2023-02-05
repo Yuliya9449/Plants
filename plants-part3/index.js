@@ -134,7 +134,72 @@ function toRemoveOpen(ico) {
 }
 
 
-// !=======================================
+// ! select=======================================
+
+let select = function() {
+
+    let window = document.documentElement.clientWidth;  //.. получаем ширину окна браузера
+    let select = document.querySelector('.contacts__select');  //  это селект
+    let selectHeader = select.querySelector('.select__header');  //  это окно селекта
+    let currentText = select.querySelector('.select__current');  //..это текущий текст окна селекта
+
+    selectHeader.addEventListener('click', toSelect);
+
+    let selectItemsTitlesArray = [...document.querySelectorAll('.select__item-title')];  //  это спрятанные заголовки
+    let itemContentsArray = [...select.querySelectorAll('.select__item-content')];       //  это спрятанные карточки с адресами
+
+    selectItemsTitlesArray.forEach((item) => {
+        item.addEventListener('click', toChooseItem);
+    });
+
+
+
+    function toSelect() {
+        // console.log(this);  this-- это окошко селекта
+        
+        
+        if( window > 380 && window <= 768) {                      // для экрана 768
+            this.parentElement.classList.add('select_active');    // добавляем селекту класс актив
+            this.parentElement.style.top = -40 + 'px';           //  cдвигаем селект вверх
+            }
+
+        if( window <= 380) {                                            //  для мобилки
+            this.parentElement.classList.add('select_active');          // добавляем селекту класс актив
+            this.parentElement.style.top = -38 + 'px';                  //  cдвигаем селект вверх
+            let img = this.closest('.contacts__wrapper').querySelector('.contacts-img__container'); // добираемся до картинки с тётей
+            img.style.opacity = 0;  //  делаем тётю прозрачной
+        }
+
+
+        if(( window > 768)) {
+            console.log(this);
+            this.parentElement.classList.add('select_active');    //  для desktop
+        }
+        
+        this.parentElement.classList.add('select_active-colored');  //  красим окошко селекта
+
+
+        itemContentsArray.forEach((item) => {
+            item.classList.remove('select__item-content_open');  //.. закрываем все окошки с иформацией
+        })
+
+        
+    }
+   
+    function toChooseItem() {
+        // console.log(this);        this-- это заголовок
+        let index = selectItemsTitlesArray.indexOf(this);             //.. получаем номер заголовка, на который нажали
+        let text = this.innerText;                                    //.. получаем текст заголовка
+        // let currentText = select.querySelector('.select__current');  //..это текущий текст окна селекта
+        currentText.innerText = text;                                //.. кладём полученный текст в окно селекта
+        select.classList.remove('select_active');                   //.. закрываем список заголовков
+        itemContentsArray[index].classList.add('select__item-content_open');  //..берём из карточек сописанием нужную( с таким же номером, как у заголавка, и открываем её)
+    }
+}
+
+select();
+
+// !===================
 
 
 
