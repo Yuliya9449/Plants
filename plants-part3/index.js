@@ -2,7 +2,7 @@
 //Hamburger
 
 if(document.documentElement.clientWidth <= 570) {
-    let a = document.querySelector(".header__logo-line");
+    let a = document.querySelector(".hamburger__container");
     let nav = document.querySelector(".navigation");
     let ham = document.querySelector(".hamburger");
 
