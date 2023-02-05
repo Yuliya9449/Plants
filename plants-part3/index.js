@@ -1,5 +1,7 @@
 //  !================================== 
 //Hamburger
+
+if(document.documentElement.clientWidth <= 570) {
     let a = document.querySelector(".header__logo-line");
     let nav = document.querySelector(".navigation");
     let ham = document.querySelector(".hamburger");
@@ -10,7 +12,8 @@
     function changeNav(){
         nav.classList.toggle('navigation-hidden');
         ham.classList.toggle('hamburger-toggle');
-    };
+    }
+}
 
 // !=====================================
 
@@ -172,7 +175,7 @@ let select = function() {
 
 
         if(( window > 768)) {
-            console.log(this);
+            // console.log(this);
             this.parentElement.classList.add('select_active');    //  для desktop
         }
         
